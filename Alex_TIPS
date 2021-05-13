@@ -1,0 +1,14 @@
+
+Great work! Yep, that would have been the problem. And, yes, I’m glad we decided to show normalized plots in the poster.
+
+So this looks much more sensible. Still a disparity there, but the model produces the magnitude of SIF I would expect it to. There is still a factor of ten difference, obviously we’ll need to dig into that. A couple of thoughts here:
+Apples to apples comparison of model and measurements. This magnitude difference is similar to what I have seen at leaf level, comparing Fluspect with some of Troy’s leaf SIF spectra. We are *fairly certain that we’re comparing apples to apples (directional vs hemispheric, and appropriate radiance units). But, it is possible we are missing something and some issue is leading to the differences you’re seeing at canopy level.
+Parameter tuning, mostly by controlling APAR:
+Modify leaf angle distribution parameters. Could try a couple of test cases to investigate sensitivity… maybe try (i) spherical distribution (LIDFa = -0.35, LIDFb = -0.15), and (ii) uniform distribution (LIDFa = 0, LIDFb = 0).
+Modify LAI within sensible range. Maybe LAI=4.0 is an overestimation?
+Modify pigments. What chlorophyll content value are you using?
+Clumping. I’ll contact Renato to see if increased clumping generally decreases APAR and SIF. This could be a big factor we’re missing.
+
+
+Cheers,
+Alex
